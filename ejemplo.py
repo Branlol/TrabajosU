@@ -42,10 +42,8 @@ img_28x28 = img_28x28 / 255.0
 
 print(img_28x28)
 print(x_train[0])
-print(img_28x28.shape)
-print(x_train[0].shape)
 
-imtest2.append(img_28x28)
+print("hola papu")
 
 img_pil = Image.open("./ML/ocho.jpg")
 img_28x28 = np.array(img_pil.resize((28, 28)))
