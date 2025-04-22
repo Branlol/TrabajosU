@@ -37,6 +37,7 @@ def selection_sort(A):
     return A
 
 num_elements = np.arange(1000, 10001, 1000)
+print(num_elements)
 size = num_elements.size
 print(size)
 #print(num_elements)
