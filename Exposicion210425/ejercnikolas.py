@@ -1,3 +1,7 @@
+#Juan Londoño
+#Nikollas Mendoza
+#Samuel Becerra
+#Brandon Jaimes
 pasar = False
 n = []
 l = 1
@@ -17,6 +21,7 @@ def busqueda_binaria(lis, obj):
     while izquierda <= derecha:
         medio = (izquierda + derecha) // 2
         valor_medio = lis[medio]
+        print(f"izquierda={izquierda}, derecha={derecha}, medio={medio}, valor medio={valor_medio}")
 
         if valor_medio == obj:
             return medio
@@ -24,7 +29,8 @@ def busqueda_binaria(lis, obj):
             izquierda = medio + 1
         else:
             derecha = medio - 1
-    return "Pailas no esta"  # El objetivo no está en la lista
+
+    return None  # El objetivo no está en la lista
 
 while pasar == False:
     k = int(input(f"Ingrese el numero {l} de la lista:\n"))
@@ -37,6 +43,20 @@ while pasar == False:
 print (n)
 n = insertion_sort(n)
 print(n)
-vaor=int(input("Ingrese el valor a buscar:\n"))
-print(busqueda_binaria(n,vaor))#Modificar solo el numero a buscar
+v=int(input("inserte el valor a buscar: "))
+print(busqueda_binaria(n,v))#Modificar solo el numero a buscar
 
+
+
+"""def busqueda_binaria_recursiva(lista, objetivo, izquierda, derecha): #Recursividad
+    if izquierda > derecha:
+        return -1  # Caso base: el objetivo no está en la lista
+
+    medio = (izquierda + derecha) // 2
+
+    if lista[medio] == objetivo:
+        return medio
+    elif lista[medio] < objetivo:
+        return busqueda_binaria_recursiva(lista, objetivo, medio + 1, derecha)
+    else:
+        return busqueda_binaria_recursiva(lista, objetivo, izquierda, medio - 1)"""
